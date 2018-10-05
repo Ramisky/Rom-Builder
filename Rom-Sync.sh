@@ -1,5 +1,5 @@
 #!/bin/bash
-echo This is the Beryllium Rom Builder Script made by Ramyski for HOSP
+echo This is a Rom Builder Script made by Ramyski for HOSP
 echo Please note that this script does not setup CCache
 echo Android Versions To Choose From :
 echo Oreo
