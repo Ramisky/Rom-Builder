@@ -16,6 +16,9 @@ echo PixExp
 echo Carbon
 echo Descendant
 echo StatixOS
+echo CypherOS
+echo Lineage
+echo PixysOS
 echo Please Choose the Rom U want to Build
 echo it is Case Sensitive too
 read romname
@@ -41,6 +44,9 @@ mkdir CypherOS && repo init -u https://github.com/CypherOS/platform_manifest.git
 elif [ "$romname" = "Lineage" ];then
    echo You chose Lineage
 mkdir Lineage && repo init -u git://github.com/LineageOS/android.git -b lineage-16.0 && repo sync -c --force-sync --no-clone-bundle --no-tags
+elif [ "$romname" = "PixysOS" ];then
+   echo You chose PixysOS
+mkdir PixysOS && repo init -u https://github.com/PixysOS/manifest -b pie && repo sync -c --force-sync --no-clone-bundle --no-tags
 else
    echo You did not choose a Rom to Sync
 fi
