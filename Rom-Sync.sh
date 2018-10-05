@@ -35,6 +35,12 @@ mkdir Descendant && repo init -u https://github.com/Descendant/manifest.git -b N
 elif [ "$romname" = "StatixOS" ];then
    echo You chose StatixOS
 mkdir StatixOS && repo init -u https://github.com/StatiXOS/android_manifest.git -b 9 && repo sync -c --force-sync --no-clone-bundle --no-tags
+elif [ "$romname" = "CypherOS" ];then
+   echo You chose CypherOS
+mkdir CypherOS && repo init -u https://github.com/CypherOS/platform_manifest.git -b poundcake-release && repo sync -c --force-sync --no-clone-bundle --no-tags
+elif [ "$romname" = "Lineage" ];then
+   echo You chose Lineage
+mkdir Lineage && repo init -u git://github.com/LineageOS/android.git -b lineage-16.0 && repo sync -c --force-sync --no-clone-bundle --no-tags
 else
    echo You did not choose a Rom to Sync
 fi
@@ -43,6 +49,7 @@ else
 fi
 echo So I Now I guess We Pick a Device
 echo Pick One
+echo It IS CASE SENSITIVE
 echo Supported Devices:
 echo Beryllium
 echo Hi6250
