@@ -25,28 +25,28 @@ read romname
 export romname
 if [ "$romname" = "AEX" ];then
    echo You chose AEX
-mkdir AEX && repo init -u git://github.com/AospExtended/manifest.git -b 9.x && repo sync -c --force-sync --no-clone-bundle --no-tags
+mkdir AEX && cd AEX && repo init -u git://github.com/AospExtended/manifest.git -b 9.x && repo sync -c --force-sync --no-clone-bundle --no-tags && cd ..
 elif [ "$romname" = "PixExp" ];then
    echo You chose PixExp
-mkdir PixExp && repo init -u https://github.com/PixelExperience-P/manifest -b pie && repo sync -c --force-sync --no-clone-bundle --no-tags
+mkdir PixExp && cd PixExp && repo init -u https://github.com/PixelExperience-P/manifest -b pie && repo sync -c --force-sync --no-clone-bundle --no-tags && cd ..
 elif [ "$romname" = "Carbon" ];then
    echo You chose Carbon
-mkdir Carbon && repo init -u https://github.com/CarbonBeta/android.git -b cr-7.0 && repo sync -c --force-sync --no-clone-bundle --no-tags
+mkdir Carbon && cd Carbon && repo init -u https://github.com/CarbonBeta/android.git -b cr-7.0 && repo sync -c --force-sync --no-clone-bundle --no-tags && cd ..
 elif [ "$romname" = "Descendant" ];then
    echo You chose Descendant
-mkdir Descendant && repo init -u https://github.com/Descendant/manifest.git -b NineDotZero_GSI && repo sync -c --force-sync --no-clone-bundle --no-tags
+mkdir Descendant && cd Descendant && repo init -u https://github.com/Descendant/manifest.git -b NineDotZero_GSI && repo sync -c --force-sync --no-clone-bundle --no-tags && cd ..
 elif [ "$romname" = "StatixOS" ];then
    echo You chose StatixOS
-mkdir StatixOS && repo init -u https://github.com/StatiXOS/android_manifest.git -b 9 && repo sync -c --force-sync --no-clone-bundle --no-tags
+mkdir StatixOS && cd StatixOS && repo init -u https://github.com/StatiXOS/android_manifest.git -b 9 && repo sync -c --force-sync --no-clone-bundle --no-tags && cd ..
 elif [ "$romname" = "CypherOS" ];then
    echo You chose CypherOS
-mkdir CypherOS && repo init -u https://github.com/CypherOS/platform_manifest.git -b poundcake-release && repo sync -c --force-sync --no-clone-bundle --no-tags
+mkdir CypherOS && cd CypherOS && repo init -u https://github.com/CypherOS/platform_manifest.git -b poundcake-release && repo sync -c --force-sync --no-clone-bundle --no-tags && cd ..
 elif [ "$romname" = "Lineage" ];then
    echo You chose Lineage
-mkdir Lineage && repo init -u git://github.com/LineageOS/android.git -b lineage-16.0 && repo sync -c --force-sync --no-clone-bundle --no-tags
+mkdir Lineage && cd Lineage && repo init -u git://github.com/LineageOS/android.git -b lineage-16.0 && repo sync -c --force-sync --no-clone-bundle --no-tags && cd ..
 elif [ "$romname" = "PixysOS" ];then
    echo You chose PixysOS
-mkdir PixysOS && repo init -u https://github.com/PixysOS/manifest -b pie && repo sync -c --force-sync --no-clone-bundle --no-tags
+mkdir PixysOS && cd PixysOS && repo init -u https://github.com/PixysOS/manifest -b pie && repo sync -c --force-sync --no-clone-bundle --no-tags && cd ..
 else
    echo You did not choose a Rom to Sync
 fi
@@ -61,11 +61,11 @@ echo Beryllium
 echo Hi6250
 read devicename
 if [ "$devicename" = "Beryllium" ];then
-. Beryllium-Sync.sh
-. Beryllium-Build.sh
+. Rom-Builder/Beryllium-Sync.sh
+. Rom-Builder/Beryllium-Build.sh
 elif [ "$devicename" = "Hi6250" ];then
-. Hi6250-Sync.sh
-. Hi6250-Build.sh
+. Rom-Builder/Hi6250-Sync.sh
+. Rom-Builder/Hi6250-Build.sh
 else
    echo You did not choose a Phone
 fi
