@@ -1,5 +1,5 @@
 #!/bin/bash
-elif [ "$romname" = "CypherOS" ];then
+if [ "$romname" = "CypherOS" ];then
 git clone https://github.com/Ramyski/android_device_xiaomi_beryllium -b Lineage-16 ${romname}/device/xiaomi/beryllium
 git clone https://github.com/Ramyski/android_vendor_xiaomi_sdm845-common ${romname}/vendor/xiaomi/sdm845-common
 git clone https://github.com/Ramyski/android_vendor_xiaomi_msm8998-common ${romname}/vendor/xiaomi/msm8998-common
