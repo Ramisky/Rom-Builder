@@ -32,4 +32,4 @@ git clone https://github.com/Ramyski/Rom-Builder
  ```
 . Rom-Builder/Rom-Sync.sh
 ```
-Follow The Steps Then Viola
+Follow The Steps & Viola
